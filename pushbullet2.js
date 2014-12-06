@@ -11,7 +11,11 @@ exports.init = function(SARAH){
     } else {
       if (!data) data = {"title":"Title", "body": "Body"};
       if (!data.title) data.title = "Title";
-      if (!data.body) data.body = "Body";
+      if (!data.content) data.content = "Body";
+      if (!data.body) {
+        data.body = data.content;
+        delete data.content;
+      }
       if (!data.device_iden) {
         if (config.device_iden) data.device_iden = config.device_iden;
       }
@@ -44,4 +48,10 @@ exports.init = function(SARAH){
       });
     }
   });
-}
+};
+
+exports.action = function(data, callback, config, SARAH) {
+  data.body = data.content;
+  SARAH.trigger('pushbullet2', data);
+  callback({});
+};

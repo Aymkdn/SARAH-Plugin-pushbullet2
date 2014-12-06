@@ -18,8 +18,10 @@
       
       <h2>Utilisation du plugin</h2>
       <p>Le plugin s'appelle via d'autres plugins. Pour ce faire, les autres plugins doivent l'appeler avec la commande :<br>
-      <b style="margin-left:15px">SARAH.trigger('pushbullet2', { "title" : "Titre de la notification", "body" : "Contenu du message" });</b><br><br>
-      Il est également possible de préciser le device qui sera notifié en ajoutant <b>"device_iden"</b> avec le bon iden (par défaut on utilise celui qui est indiqué dans la configuration, ou c'est envoyé à tous les appareils si aucun n'est spécifié).</p>
+      <b style="margin-left:15px">SARAH.trigger('pushbullet2', { "title" : "Titre de la notification", "content" : "Contenu du message" });</b>
+      </p>
+      <p>Il est également possible de l'appeler avec l'URL : <a href="http://127.0.0.1:8080/sarah/pushbullet2?title=mon%20titre&content=mon%20message" target="_blank">http://127.0.0.1:8080/sarah/pushbullet2?title=mon%20titre&content=mon%20message</a></p>
+      <p>Remarque : il est possible de préciser le device qui sera notifié en ajoutant <b>"device_iden"</b> avec le bon iden (par défaut on utilise celui qui est indiqué dans la configuration, ou c'est envoyé à tous les appareils si aucun n'est spécifié).</p>
     </div>
   </div> 
 </div>
