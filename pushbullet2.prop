@@ -1,0 +1,10 @@
+{
+  "modules" : { 
+    "pushbullet2":     {
+      "description" : "Client to send a notification with PushBullet",
+      "version"     : "1.0",
+      "access_token": "Find it at https://www.pushbullet.com/account",
+      "device_iden" : ""
+    }
+  }
+}

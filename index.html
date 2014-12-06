@@ -1,0 +1,25 @@
+<div id="pushbullet2">
+  <div class="row-fluid">
+    <div class="span8">
+      <p><b>Auteur:</b> Aymeric (<a href="https://twitter.com/aymkdn" title="Lien vers mon compte Twitter">Twitter</a> <a href="https://github.com/Aymkdn/">GitHub</a> <a href="http://blog.kodono.info">Blog</a>)</p>
+      <p>
+        Ce plugin permet d'envoyer des notifications Pushbullet.<br>
+        Les sources sont disponibles sur GitHub: <a href="https://github.com/Aymkdn/SARAH-Plugin-pushbullet2">https://github.com/Aymkdn/SARAH-Plugin-pushbullet2</a>
+      </p>
+      
+      <p>Vous devez configurer ce plugin en entrant votre <b>access token</b> disponible sur votre compte Pushbullet à l'adresse <a href="https://www.pushbullet.com/account" target="_blank">https://www.pushbullet.com/account</a>. Il est également possible d'envoyer les notifications sur des appareils bien précis (et pas sur tous vos devices). Pour cela vous devez configurer le <b>device_iden</b>. Pour trouver le <b>device_iden</b> il faut vous rendre sur <a href="http://hackst.com/" target="_blank">http://hackst.com/</a> :
+      <ul>
+        <li>Dans la zone URL entrer l'adresse <b>https://api.pushbullet.com/v2/devices</b></li>
+        <li>Cliquer sur <b>Add Header</b>, puis, dans la première colonne entrer <b>Authorization</b>, puis dans la deuxième colonne entrer <b>Bearer <em>votre_access_token</em></b></li>
+        <li>Cliquer sur <b>Execute</b></li>
+      </ul>
+      Là vous allez avoir une réponse sous forme d'une chaine JSON. Il faudra repérer le device que vous voulez et récupérer son <b>iden</b>.
+      </p>
+      
+      <h2>Utilisation du plugin</h2>
+      <p>Le plugin s'appelle via d'autres plugins. Pour ce faire, les autres plugins doivent l'appeler avec la commande :<br>
+      <b style="margin-left:15px">SARAH.trigger('pushbullet2', { "title" : "Titre de la notification", "body" : "Contenu du message" });</b><br><br>
+      Il est également possible de préciser le device qui sera notifié en ajoutant <b>"device_iden"</b> avec le bon iden (par défaut on utilise celui qui est indiqué dans la configuration, ou c'est envoyé à tous les appareils si aucun n'est spécifié).</p>
+    </div>
+  </div> 
+</div>
