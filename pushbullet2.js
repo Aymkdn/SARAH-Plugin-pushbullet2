@@ -12,10 +12,9 @@ exports.init = function(SARAH){
       if (!data) data = {"title":"Title", "body": "Body"};
       if (!data.title) data.title = "Title";
       if (!data.content) data.content = "Body";
-      if (!data.body) {
-        data.body = data.content;
-        delete data.content;
-      }
+      if (!data.body) data.body = data.content;
+      delete data.content;
+      
       if (!data.device_iden) {
         if (config.device_iden) data.device_iden = config.device_iden;
       }
@@ -30,7 +29,7 @@ exports.init = function(SARAH){
         url: 'https://api.pushbullet.com/v2/pushes',
         headers: {
           'Content-Type':  'application/json',
-          'Authorization': 'Bearer '+config.access_token
+          'Access-Token': config.access_token
         },
         json: true,
         body: JSON.stringify(data)

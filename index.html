@@ -7,11 +7,11 @@
         Les sources sont disponibles sur GitHub: <a href="https://github.com/Aymkdn/SARAH-Plugin-pushbullet2">https://github.com/Aymkdn/SARAH-Plugin-pushbullet2</a>
       </p>
       
-      <p>Vous devez configurer ce plugin en entrant votre <b>access token</b> disponible sur votre compte Pushbullet à l'adresse <a href="https://www.pushbullet.com/account" target="_blank">https://www.pushbullet.com/account</a>. Il est également possible d'envoyer les notifications sur des appareils bien précis (et pas sur tous vos devices). Pour cela vous devez configurer le <b>device_iden</b>. Pour trouver le <b>device_iden</b> il faut vous rendre sur <a href="http://hackst.com/" target="_blank">http://hackst.com/</a> :
+      <p>Vous devez configurer ce plugin en entrant votre <b>access token</b> disponible sur votre compte Pushbullet à l'adresse <a href="https://www.pushbullet.com/account" target="_blank">https://www.pushbullet.com/account</a>. Il est également possible d'envoyer les notifications sur des appareils bien précis (et pas sur tous vos devices). Pour cela vous devez configurer le <b>device_iden</b>. Pour trouver le <b>device_iden</b> il faut vous rendre sur <a href="https://www.hurl.it/" target="_blank">https://www.hurl.it/</a> :
       <ul>
         <li>Dans la zone URL entrer l'adresse <b>https://api.pushbullet.com/v2/devices</b></li>
-        <li>Cliquer sur <b>Add Header</b>, puis, dans la première colonne entrer <b>Authorization</b>, puis dans la deuxième colonne entrer <b>Bearer <em>votre_access_token</em></b></li>
-        <li>Cliquer sur <b>Execute</b></li>
+        <li>Cliquer sur <b>Add Header</b>, puis, dans la première colonne entrer <b>Access-Token</b>, puis dans la deuxième colonne entrer <b>votre_access_token</b></li>
+        <li>Cliquer sur <b>Launch Request</b></li>
       </ul>
       Là vous allez avoir une réponse sous forme d'une chaine JSON. Il faudra repérer le device que vous voulez et récupérer son <b>iden</b>.
       </p>
